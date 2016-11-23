@@ -1,0 +1,145 @@
+ol {
+  list-style-type: decimal;
+}
+.wrapper {
+  width: 30%;
+  min-width: 200px;
+  margin: 100px auto;
+  font-family: Tahoma;
+  font-size: 20px;
+}
+
+.item-list li {
+  position: relative;
+  margin-bottom: 3px;
+  padding: 5px;
+  padding-left: 10px;
+  border: 1px solid rgba(100, 100, 100, .5);
+  border-radius: 5px;
+}
+
+.item-list input {
+  width: 95%;
+  border: 0;
+  outline: 0;
+  background: inherit;
+  font-family: Tahoma;
+  font-size: 20px;
+}
+
+.task-edit {
+  background: #c8c8c8;
+}
+
+.task-done {
+  background: #e7e7e7;
+  text-decoration: line-through;
+}
+
+.controls {
+  margin-top: 30px;
+}
+
+.controls input {
+  width: 100%;
+  font-family: Tahoma;
+  font-size: 20px;
+  outline: none;
+}
+
+.item-add {
+  display: block;
+  margin: 20px auto;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.item-delete, .item-save, .item-edit, .item-done {
+  position: relative;
+  display: block;
+  float: right;
+  width: 24px;
+  height: 24px;
+  border-radius: 30%;
+  cursor: pointer;
+}
+
+.item-delete {
+  margin-right: -91px;
+  border: 1px solid rgba(100, 100, 100, .5);
+  background: #ededed;
+}
+
+.item-save {
+  display: none;
+  margin-right: -34px;
+  border: 1px solid rgba(100, 100, 100, .5);
+  background: #149149;
+}
+.item-done {
+  margin-right: -63px;
+  border: 1px solid rgba(100, 100, 100, .5);
+  background: #ededed;
+}
+
+.item-edit {
+  margin-right: -34px;
+  border: 1px solid rgba(100, 100, 100, .5);
+  background: #ededed;
+  color: rgba(100, 100, 100, .5);
+  font-size: 14px;
+  text-align: center;
+}
+
+.item-delete::before, .item-delete::after, .item-save::before,
+.item-save::after, .item-done::before, .item-done::after  {
+  display: block;
+  position: absolute;
+  background: #f00;
+  content: '';
+}
+
+.item-save::before, .item-save::after {
+    background: #fff;
+}
+
+.item-delete::before, .item-delete::after {
+  top: 10px;
+  left: 2px;
+  width: 18px;
+  height: 3px;
+}
+
+.item-delete::before, .item-save::before, .item-done::before {
+  transform: rotate(45deg);
+}
+
+.item-delete::after, .item-save::after, .item-done::after  {
+  transform: rotate(-45deg);
+}
+
+.item-save::before, .item-done::before {
+  top: 14px;
+  left: 2px;
+  width: 9px;
+  height: 3px;
+}
+.item-save::after, .item-done::after {
+  top: 11px;
+  left: 6px;
+  width: 17px;
+  height: 3px;
+}
+
+.item-done::before, .item-done::after {
+  background: #149149;
+}
+
+.task-done .item-done::before {
+  display: none;
+}
+
+.task-done .item-done::after {
+  left: 3px;
+  transform: none;
+}
